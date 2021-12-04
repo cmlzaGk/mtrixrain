@@ -7,7 +7,7 @@ There are four versions of the file. All of them read and create the buffer to d
 
 The difference is in rendering. 
 
-# async/theone.py:
+# asyncio/theone.py:
 
 On Windows requires the python curses library 'pip install windows-curses'. I used version 2.3.0
 
