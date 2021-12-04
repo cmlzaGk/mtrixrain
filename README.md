@@ -3,9 +3,17 @@
 
 theone.py creates a matrix rain on a command prompt. --cipher command feeds some messages that can be embeded into the rain for fun
 
-There are three versions of the file. All of them read and create the buffer to display on the screen the same way. 
+There are four versions of the file. All of them read and create the buffer to display on the screen the same way. 
 
 The difference is in rendering. 
+
+# async/theone.py:
+
+On Windows requires the python curses library 'pip install windows-curses'. I used version 2.3.0
+
+python --cipher "FollowTheWhiteRabbit Neo Trinity"  --password "SomeGimmickPassword"
+
+This renders a colored rain on the command prompt using ncurses. Is able to automatically detect console dimensions, and is very smooth. 
 
 # ncurses/theone.py:
 
