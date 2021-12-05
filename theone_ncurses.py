@@ -11,8 +11,8 @@ from curses import wrapper, init_pair
 from enum import Flag, auto
 from random import randint, choice
 
-RENDER_DELAY = 0.1
-CHANNEL_DELAY = 0.1
+RENDER_DELAY = 0.04
+CHANNEL_DELAY = 0.08
 FAST_CHANNEL_DELAY = 0.0001
 
 
@@ -145,7 +145,11 @@ class MessageGenerator:
 class MatrixChannel:
     '''
         A Matrix Channel represents a vertical line on the screen. 
-        The main job of this class is to deque a vertical channel *slowly* into a Circular buffer that renderer can pick up 
+        The main job of this class is to deque a vertical channel into a Circular buffer that renderer can pick up 
+
+        The main difference functionally between theone.py and theone_ncurses.py is that the channel can go faster than render.
+        This allows for fast moving vertical channels.
+        In effect if renderer is slow, it becomes lossy.
     '''
     def __init__(self, channelid, generator, renderer):
         self._channelid = channelid

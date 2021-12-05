@@ -4,15 +4,20 @@
 
 # theone_ncurses.py
 
-Requires python curses library. 
+Requires Python3. 
 
-On Windows requires the python curses library 'pip install windows-curses'. I used version 2.3.0
+Windows - requires the python curses library 'pip install windows-curses'. I used version 2.3.0
+Linux - no third party requirements
 
 python theone_ncurses.py  --password "SomeGimmickPassword"
 
+This [Video](https://www.youtube.com/watch?v=uJwc8n0OnQE) shows a sample output captured on Windows cmd.
+
 # theone.py:
 
-This requires no third party library. 
+Requires Python3. 
+
+Windows and Linux - no third party requirements
 
 However, it requires user to set width and height manually through command parameters
 
