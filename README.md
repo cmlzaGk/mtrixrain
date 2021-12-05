@@ -1,59 +1,29 @@
 # mtrixrain
 ## Couple of python3 scripts to make it rain
 
-theone.py creates a matrix rain on a command prompt. --cipher command feeds some messages that can be embeded into the rain for fun
 
-There are four versions of the file. All of them read and create the buffer to display on the screen the same way. 
+# theone_ncurses.py
 
-The difference is in rendering. 
-
-# asyncio/theone.py:
+Requires python curses library. 
 
 On Windows requires the python curses library 'pip install windows-curses'. I used version 2.3.0
 
-python --cipher "FollowTheWhiteRabbit Neo Trinity"  --password "SomeGimmickPassword"
+python theone_ncurses.py  --password "SomeGimmickPassword"
 
-This renders a colored rain on the command prompt using ncurses. Is able to automatically detect console dimensions, and is very smooth. 
+# theone.py:
 
-# ncurses/theone.py:
+This requires no third party library. 
 
-On Windows requires the python curses library 'pip install windows-curses'. I used version 2.3.0
+However, it requires user to set width and height manually through command parameters
 
-python --cipher "FollowTheWhiteRabbit Neo Trinity" 
+This can be obtained by right clicking the terminal title, select properties, layout and Window Size. 
 
-This renders a colored rain on the command prompt using ncurses. Is able to automatically detect console dimensions, and is very smooth. 
+python theone.py --width 111 --height 28
 
+If terminal supports VT100 escape sequences then vt100 can be used 
 
-# color/theone.py 
-
-Requires termcolor library on Windows and Linux 'pip install termcolor'. I used version 1.1.0. 
-
-This renders a colored rain. However, relies on windows and linux clear screen commands to refresh the screen. 
-
-Rendering is done by clearing the screen and displaying a string buffer to stdout. 
-
-Warning: The rain is jerky and creates flashes. 
-
-This also requires caller to provide the dimensions of the console. On windows, this can be obtained by right clicking the console title and looking for width and height in layout. 
-
-python theone.py --width 346 --height 88 --cipher "FollowTheWhite
-Rabbit Neo Trinity Morpheus Dorothy Kansas"
+python theone.py --width 111 --height 28 --vt100 --color
 
 
-# nocolor/theone.py:
-
-Requires no library in linux or windows. This renders a black and white rain. 
-
-Rendering is done by clearing the screen and displaying a string buffer to stdout. 
-
-Warning: The rain is jerky and creates flashes. 
-
-This also requires caller to provide the dimensions of the console. On windows, this can be obtained by right clicking the console title and looking for width and height in layout. 
-
-python theone.py --width 346 --height 88 --cipher "FollowTheWhite
-Rabbit Neo Trinity Morpheus Dorothy Kansas"
-
-
-
-
+## Disregard the sub-folders. They are different versions I was trying.
 

@@ -100,10 +100,6 @@ class Matrix:
             Create a string object that represents whats displayed on the screen
             each line is made up of characters of respective channel for the position
             reverse the string at the end to create an effect that messages are scrolling down
-
-            if something is part of a ciphermessage, append '!' to it
-            ! is never part of the matrix channel messages
-            The caller removes ! and handles color coding based on positions of !
         '''
         s = ''
         drainers = [iter(ch.message) for ch in self._channels]

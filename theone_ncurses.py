@@ -1,3 +1,6 @@
+#
+# Author: Rishi Maker
+#
 import argparse
 import asyncio 
 import curses
