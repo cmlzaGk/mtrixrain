@@ -30,5 +30,4 @@ If terminal supports VT100 escape sequences then vt100 can be used
 python theone.py --width 111 --height 28 --vt100 --color
 
 
-## Disregard the sub-folders. They are different versions I was trying.
 
